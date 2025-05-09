@@ -1,1 +1,1 @@
-# Mood-Playlist-Generator
+# Mood Playlist Generator
