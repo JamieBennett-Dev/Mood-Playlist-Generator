@@ -39,7 +39,7 @@ def main():
             top_n=20
         )
         print("\nHere are your top 20 mood-matched tracks:\n")
-        print(recs[['track_name','artist(s)','similarity']].to_string(index=False))
+        print(recs[['track_name','artist(s)','track_genre','similarity']].to_string(index=False))
         
         while True:
             save = input("\nWould you like to save these to a CSV file? (Y/N): ").strip().lower()
