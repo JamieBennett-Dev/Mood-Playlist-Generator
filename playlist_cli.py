@@ -8,6 +8,8 @@ from mood_playlist_generator import generate_mood_playlist
 def load_data():
     
     df = pd.read_csv('dataset.csv')  
+    
+    df = df.drop_duplicates(subset=['track_id'])
 
     features = [
         'danceability', 'energy', 'key', 'loudness', 'mode',
@@ -38,6 +40,22 @@ def main():
         )
         print("\nHere are your top 20 mood-matched tracks:\n")
         print(recs[['track_name','artist(s)','similarity']].to_string(index=False))
+        
+        while True:
+            save = input("\nWould you like to save these to a CSV file? (Y/N): ").strip().lower()
+            if save in ('y', 'n'):
+                break
+            print("❌ Invalid input! Please enter 'Y' or 'N'.")
+
+        if save == 'y':
+            output_path = 'recommendations.csv'
+            recs.to_csv(output_path, index=False)
+            print(f"✅ Saved recommendations to {output_path}")
+        else:
+            print("Okay, not saving to CSV.")
+
+        
+        
     except ValueError as e:
         print(f"\nError: {e}")
 
