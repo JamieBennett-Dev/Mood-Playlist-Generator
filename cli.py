@@ -19,7 +19,7 @@ def load_data():
     return df, X
 
 def main():
-    print("Welcome to the Mood Playlist Generator!\n")
+    print("Welcome to the Song Recommendation Generator!\nEnjoying Music, Made Easier\n")
 
     df, features_scaled = load_data()
 
@@ -34,11 +34,11 @@ def main():
             artist=artist_name,
             top_n=20
         )
-        print("\nHere are your top 20 mood-matched tracks:\n")
+        print("\nHere are your top 20 most similar tracks:\n")
         print(recs[['track_name','artist(s)','track_genre','similarity']].to_string(index=False))
         
         while True:
-            save = input("\nWould you like to save these to a CSV file? (Y/N): ").strip().lower()
+            save = input("\nWould you like to save this to a CSV file? (Y/N): ").strip().lower()
             if save in ('y', 'n'):
                 break
             print("❌ Invalid input! Please enter 'Y' or 'N'.")
