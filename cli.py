@@ -6,8 +6,6 @@ from song_recommendation_generator import song_recommendation_generator
 def load_data():
     
     df = pd.read_csv('dataset.csv')  
-    
-    df = df.drop_duplicates(subset=['track_id'])
 
     features = [
         'danceability', 'energy', 'key', 'loudness', 'mode',
@@ -51,9 +49,7 @@ def main():
             print(f"✅ Saved recommendations to {output_path}")
         else:
             print("Okay, not saving to CSV.")
-
-        
-        
+      
     except ValueError as e:
         print(f"\nError: {e}")
 

@@ -17,7 +17,7 @@ def song_recommendation_generator(df, features_scaled, track_id=None, track_name
     Returns:
     - DataFrame with the top N similar tracks.
     """
-    
+
     if track_id:
         match = df[df['track_id'] == track_id]
     elif track_name and artist:
@@ -40,6 +40,8 @@ def song_recommendation_generator(df, features_scaled, track_id=None, track_name
         'track_genre': df['track_genre'],
         'similarity': np.round(sim_scores, 2)
     })
+    
+    sim_df = sim_df.drop_duplicates(subset=['track_name', 'artist(s)'])
     
     sim_df['similarity'] = (sim_df['similarity'] * 100).round().astype(int).astype(str) + '%'
 
