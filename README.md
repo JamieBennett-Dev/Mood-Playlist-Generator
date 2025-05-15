@@ -58,8 +58,7 @@
     ```
 
 3. **Follow prompts**:
-    - Enter a song title and artist name (e.g., "Rotten Apple", "Alice In Chains"), or
-    - Provide a Spotify `track_id`.
+    - Enter a song title and artist name (e.g., "Rotten Apple", "Alice In Chains")
 
 4. **View recommendations**: The script prints the top 20 similar songs along with similarity scores.
 
