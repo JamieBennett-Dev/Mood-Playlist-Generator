@@ -18,17 +18,17 @@
 
     Song-Recommendation-Generator/
 
-    ├── main.ipynb                   *Data Analysis file*
+    ├── main.ipynb                   Data Analysis file
 
-    ├── mood_playlist_generator.py   *Model function -> generates top 20 songs*
+    ├── mood_playlist_generator.py   Model function -> generates top 20 songs
 
-    ├── playlist_cli.py              *CLI interface script for UX*
+    ├── playlist_cli.py              CLI interface script for UX
 
-    ├── dataset.csv                  *Spotify Dataset used* Cleaned dataset of tracks
+    ├── dataset.csv                  Spotify Dataset used Cleaned dataset of tracks
 
-    ├── README.md                    *Project overview*
+    ├── README.md                    Project overview
 
-    └── requirements.txt             *Python dependencies*
+    └── requirements.txt             Python dependencies
 
 ### Installation
 
